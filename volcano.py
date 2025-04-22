@@ -23,7 +23,7 @@ def read_data():
     try:
         #read in file and change some names for cleanup, skip first row, and number is index
         #endoing = latin1 https://www.roelpeters.be/unicodedecodeerror-utf-8-codec-cant-decode-byte-in-position/
-        df = pd.read_csv("C:/Users/Chase Ryan/OneDrive - Bentley University/Spring 2025/CS230/Final project/volcanoes.csv", skiprows=1, encoding= 'latin1',).set_index('Volcano Number')
+        df = pd.read_csv("volcanoes.csv", skiprows=1, encoding= 'latin1',).set_index('Volcano Number')
         #https://stackoverflow.com/questions/11346283/renaming-column-names-in-pandas
         df = df.rename(columns={"Volcano Name": "Name", "Elevation (m)": "Elevation"})
         #[DA7] drop a column
