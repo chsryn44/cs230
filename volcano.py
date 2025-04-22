@@ -38,7 +38,7 @@ def read_data():
         df = df.sort_values(by='Elevation', ascending=True)
         return df
     #if no file print
-    except FileNotFoundError:
+    except Exception:
         st.write("Could not find data file")
 
 
